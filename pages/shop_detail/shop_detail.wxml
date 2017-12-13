@@ -1,0 +1,53 @@
+<!--pages/shop_detail/shop_detail.wxml-->
+<import src="../template/template.wxml" />
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{ActiveColor}}" circular="{{circular}}">
+  <swiper-item wx:for="{{details.PictureListShow}}" wx:key="banner">
+    <image src="{{item}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<view class='main detail_head'>
+  <rich-text class='detail_title' name="h2">{{details.Name}}</rich-text>
+  <view class='shop_depict'>
+    {{details.Description}}
+  </view>
+  <view class='shop_price'>
+    <text wx:if="{{details.IsMember}}" class='now_price'>￥{{details.MemberPrice}}</text>
+    <text wx:else class='now_price'>￥{{details.Price}}</text>
+    <text class='old_price'>￥{{details.FakePrice}}</text>
+  </view>
+</view>
+
+<view class='main'>
+  <template is="area-head" data="{{...detaiHead}}"></template>
+</view>
+
+<view class='detail_main'>
+  <import src="../../wxParse/wxParse.wxml" />
+  <view class="contents">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+
+<view class='shop_controls'>
+  <view class='control_box'>
+    <view class='control_item' bindtap='tapPhone'>
+      <image src='../../image/icon-phone.png' mode="aspectFit"></image>
+      <text>电话</text>
+    </view>
+    <button class='control_item control_contact' open-type='contact' hover-class='none'>
+      <image src='../../image/icon-msg.png' mode="aspectFit"></image>
+      <text>客服</text>
+    </button>
+    <navigator class='control_item' hover-class='none' url='../cart/cart' open-type="switchTab">
+      <image src='../../image/shop-cart.png' mode="aspectFit"></image>
+      <text>购物车</text>
+    </navigator>
+    <view class='control_btn yellow_btn' bindtap='addCart'>
+      <text>加入购物车</text>
+    </view>
+    <view class='control_btn red_btn' bindtap='buy'>
+      <text>立即购买</text>
+    </view>
+  </view>
+</view>

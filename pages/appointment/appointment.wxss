@@ -1,0 +1,21 @@
+/* pages/appointment/appointment.wxss */
+@import '../address_edit/address_edit.wxss';
+.react_area {
+  margin-left:140rpx;
+}
+.more{
+  float: right;
+  width: 16rpx;
+  height: 28rpx;
+  margin-top: 40rpx;
+}
+.appoint_content{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  border: 1rpx solid #e4e4e4;
+  background: #fff;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+}

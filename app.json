@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sort/sort",
+    "pages/search/search",
+    "pages/shops/shops",
+    "pages/shop_detail/shop_detail",
+    "pages/cart/cart",
+    "pages/person/person",
+    "pages/orders/orders",
+    "pages/order_detail/order_detail",
+    "pages/address/address",
+    "pages/address_edit/address_edit",
+    "pages/my_praise/my_praise",
+    "pages/application/application",
+    "pages/shop_praise/shop_praise",
+    "pages/confirm_order/confirm_order",
+    "pages/pay_success/pay_success",
+    "pages/about/about",
+    "pages/appointment/appointment",
+    "pages/to_pay/to_pay",
+    "pages/money/money",
+    "pages/news_detail/news_detail",
+    "pages/printer/printer",
+    "pages/home/home"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鸟茄店铺",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aeabae",
+    "selectedColor": "#ff6709",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/nav-home-off.png",
+        "selectedIconPath": "image/nav-home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "image/nav-sorts-off.png",
+        "selectedIconPath": "image/nav-sorts-on.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "image/nav-cart-off.png",
+        "selectedIconPath": "image/nav-cart-on.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "image/nav-me-off.png",
+        "selectedIconPath": "image/nav-me-on.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

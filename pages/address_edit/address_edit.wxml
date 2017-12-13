@@ -1,0 +1,34 @@
+<!--pages/address_edit/address_edit.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='redact_box'>
+    <view class='redact_item'>
+      <text class='redact_name'>联系人</text>
+      <input class='react_area' type='text' name='LinkMan' value='{{LinkMan}}' placeholder='请输入姓名' />
+    </view>
+    <view class='redact_item'>
+      <text class='redact_name'>手机号</text>
+      <input class='react_area' type='number' name="LinkPhone" value='{{LinkPhone}}' placeholder='请输入手机号' />
+    </view>
+    <view class='redact_item' bindtap='getAddress'>
+      <text class='redact_name'>地址</text>
+      <view class='react_area'>{{Address}}
+        <text class='placeholder' wx:if="{{!Address}}">请选择地址</text>
+        <input hidden class='react_area' type='text' name="Address" value='{{Address}}' placeholder='请选择地址' />
+      </view>
+      <image class='get_location' src='../../image/icon-location.png'></image>
+    </view>
+    <view class='redact_item'>
+      <text class='redact_name'>门牌号</text>
+      <input class='react_area' type='text' name="HouseNumber" value='{{HouseNumber}}' placeholder='楼号/门牌号等详细信息' />
+    </view>
+  </view>
+  <view class='detail_block'>
+    <view class='set_default'>
+      <label>设为默认</label>
+      <switch bindchange="switchChange" color='#ff6709' checked="{{isDefault}}" />
+    </view>
+  </view>
+  <view class='main'>
+    <button class='btn_addr' formType="submit" hover-class='none'>确定</button>
+  </view>
+</form>

@@ -1,0 +1,20 @@
+/* pages/to_pay/to_pay.wxss */
+@import '../address_edit/address_edit.wxss';
+.pay_block{
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 1.8;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.pay_detail{
+  margin-left: 140rpx;
+  color: #999;
+}
+.record_link{
+  margin-top: 30rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color:#666;
+}

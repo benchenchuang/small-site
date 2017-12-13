@@ -1,0 +1,15 @@
+<!--pages/search/search.wxml-->
+<import src="../template/template.wxml"/>
+
+<!-- 搜索 -->
+<template is="search_box"></template>
+<view class='main'>
+  <!-- 商品列表 -->
+  <view class='shops_box'>
+    <block wx:for="{{searchShops}}" wx:key="new_shop">
+      <template is="shops_box" data="{{...item}}"></template>
+    </block>
+  </view>
+  <template is="no_data" wx:if="{{searchShops.length<=0}}"></template>
+</view>
+

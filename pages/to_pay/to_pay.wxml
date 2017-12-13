@@ -1,0 +1,24 @@
+<!--pages/to_pay/to_pay.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='detail_block'>
+    <view class='pay_block'>
+      <view class='pay_title fl'>付款须知：</view>
+      <view class='pay_detail'>
+        <view>1、付款前和商家确认金额；</view>
+        <view>2、付款额度0.01-9999.99元。</view>
+      </view>
+    </view>
+    <view class='redact_item'>
+      <text class='redact_name'>消费金额</text>
+      <input class='react_area' name='pay_money' type='number' placeholder='请输入金额'/>
+    </view>
+    <view class='redact_item'>
+      <text class='redact_name'>备注</text>
+      <input class='react_area' name='pay_text' type='text' placeholder='请输入备注信息'/>
+    </view>
+  </view>
+  <view class='main'>
+      <button class='btn_addr' formType="submit" hover-class='none'>付款<text wx:if="{{payMoney}}">￥{{payMoney}}</text></button>
+  </view>
+  <navigator class='record_link' hover-class='none' url='../orders/orders?cur=6&id=s6'>当面付记录</navigator>
+</form>

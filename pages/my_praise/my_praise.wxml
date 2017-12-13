@@ -1,0 +1,15 @@
+<block wx:for="{{list}}" wx:key="praise">
+  <view class='order_item'>
+    <view class='order_head'>
+      <text class='order_num'>下单时间:{{item.OrderCreationDate}}</text>
+    </view>
+    <view class='praise_title'>{{item.Number}}</view>
+    <view class='praise_content'>{{item.Contents}}</view>
+    <view class='order_image'>
+      <block wx:for="{{item.Items}}" wx:for-item="goods" wx:key="{{image+index}}" >
+        <image src="{{goods.PreviewPicture}}"></image>        
+      </block>
+    </view>
+    <view class='praise_time'>评价:{{item.CreationDate}}</view>  
+  </view>
+</block>

@@ -1,0 +1,11 @@
+/* pages/money/money.wxss */
+@import '../to_pay/to_pay.wxss';
+.money_all{
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.money_all text{
+  font-size: 36rpx;
+}

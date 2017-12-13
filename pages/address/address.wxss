@@ -1,0 +1,58 @@
+/* pages/address/address.wxss */
+.addr_box{
+  margin: 30rpx 0;
+  padding: 0 30rpx;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+  background: #fff;
+}
+.fr{
+  float: right;
+}
+.addr_item{
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e4e4e4; 
+}
+.addr_item:last-child{
+  border-bottom: none;
+}
+.addr_head,
+.addr_cont{
+  font-size: 30rpx;
+  color: #333;
+  /* height: 44rpx; */
+  line-height: 44rpx;
+}
+.addr_cont{
+  color: #666;
+}
+.addr_control{
+  padding:20rpx 0; 
+  height: 48rpx;
+  line-height: 48rpx;
+}
+radio {
+  vertical-align: 4rpx;
+}
+.addr_select{
+  margin-top: -6rpx;
+  float:left;
+  font-size: 30rpx;
+  color: #666;
+}
+.selected{
+  color: #ff6709;
+}
+.addr_common{
+  float: right;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.addr_common image{
+  margin-right: 10rpx;
+  width: 42rpx;
+  height: 44rpx;
+  vertical-align: -8rpx;
+}
+

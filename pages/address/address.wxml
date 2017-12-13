@@ -1,0 +1,36 @@
+<!--pages/address/address.wxml-->
+<import src="../template/template.wxml" />
+<radio-group class="radio-group" bindchange="radioChange">
+  <block wx:for="{{list}}" wx:key="addr">
+    <view class='addr_box'>
+      <navigator class='addr_item' open-type='redirect' url="{{url}}{{item.Id}}">
+        <view class='addr_head'>
+          <text>{{item.LinkMan}}</text>
+          <text class='fr'>{{item.LinkPhone}}</text>
+        </view>
+        <view class='addr_cont'>{{item.Address+item.HouseNumber}}</view>
+      </navigator>
+      <view class='addr_control' wx:if="{{!orderId}}">
+        <view class='addr_select'>
+          <radio value="{{item.Id}}" name='address' data-index="{{index}}" id="{{item.Id}}" checked='{{item.IsDefault}}'></radio>
+          <label class='selected' for="{{item.Id}}" wx:if="{{item.IsDefault}}">默认地址</label>
+          <label for="{{item.Id}}" bindtap='setDefaultAddress' wx:else>设为默认</label>
+        </view>
+        <view class='addr_common addr_del' bindtap='deleteAddress' data-id='{{item.Id}}'>
+          <image src='../../image/icon-del.png'></image>
+          <text>删除</text>
+        </view>
+        <navigator class='addr_common addr_edit' hover-class='none' url='{{editUrl}}{{item.Id}}'>
+          <image src='../../image/icon-edit.png'></image>
+          <text>编辑</text>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</radio-group>
+<template is="no_data" wx:if="{{list.length<=0}}"></template>
+
+
+<view class='main'>
+  <navigator class='btn_addr' hover-class='none' url='../address_edit/address_edit?orderid={{orderId}}'>{{btn_text}}</navigator>
+</view>

@@ -1,0 +1,66 @@
+/* pages/address_edit/address_edit.wxss */
+.redact_box{
+  padding: 0 30rpx;
+  margin: 30rpx 0;
+  background: #fff;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.redact_item{
+  position: relative;
+  font-size: 30rpx;
+  color: #333;
+  /* height: 108rpx; */
+  line-height: 108rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  overflow: hidden;
+}
+.redact_item:last-child{
+  border-bottom: none;
+}
+.redact_name{
+  float: left;
+}
+.react_area{
+  padding: 24rpx 0;
+  margin-left: 140rpx;
+  margin-right: 100rpx;
+  /* height: 60rpx; */
+  line-height: 60rpx;
+}
+.get_location{
+  padding: 30rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10rpx;
+  width:36rpx;
+  height: 42rpx;
+  z-index: 999;
+}
+.placeholder{
+  color: #888;
+}
+.set_default{
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #666;
+}
+.set_default checkbox,
+.set_default switch{
+  float: right;
+   margin-top: -18rpx; 
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+   border-color: #ff6709;
+   background: #ff6709;
+   color: #fff!important;
+}
+checkbox .wx-checkbox-input{
+   border-color: #999;
+   width:40rpx;
+   height: 40rpx;
+   border-radius: 50%;
+}

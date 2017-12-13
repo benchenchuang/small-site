@@ -1,0 +1,11 @@
+<!--pages/pay_success/pay_success.wxml-->
+<view class='detail_block'>
+  <view class='pay_success'>
+    <icon type="success" size="80" />
+    <view class="title">订单支付成功</view>
+  </view>
+</view>
+<view class='main'>
+  <button class="btn_addr mt_40"> 用户订单列表 </button>
+  <navigator class="btn_default mt_40"> 回到首页</navigator>
+</view>

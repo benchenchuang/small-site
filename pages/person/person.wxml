@@ -1,0 +1,34 @@
+<!--pages/person/person.wxml-->
+<import src="../template/template.wxml"/>
+
+<view class='person_head'>
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  <view class="nickname">{{userInfo.nickName}}</view>
+</view>
+
+<view class='list_box'>
+  <block wx:for="{{listBox}}" wx:key="list">
+    <block wx:if="{{item.active}}">
+      <view bindtap='{{item.active}}'>
+        <template is="person_list" data="{{item}}"></template>
+      </view>
+    </block>
+    <block wx:else>
+      <template is="person_list" data="{{item}}"></template>
+    </block>
+    
+    <block wx:if="{{item.lists}}">
+      <view class='list_item_box'>
+        <block wx:for="{{item.lists}}" wx:key="list">
+          <navigator class='item_box' hover-class='none' url="{{item.url}}">
+            <image src="{{item.icon}}" mode="aspectFit"></image>
+            <text>{{item.name}}</text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </block>
+</view>
+
+
+

@@ -1,0 +1,120 @@
+/**index.wxss**/
+@import '../template/template.wxss';
+.shop_info{
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.shop_address{
+  padding:10rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.shop_icon{
+  width: 36rpx;
+  height: 42rpx;
+  padding: 20rpx;
+}
+.shop_icon.fr{
+  margin-left: 10rpx;
+}
+.shop_addr{
+  margin:0 154rpx 0 56rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_box{
+  width: 100%;
+  padding-bottom: 30rpx;
+  background: #fff;
+}
+.menu_box .menu_item{
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.menu_item image{
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin: 30rpx auto 10rpx;
+}
+.notice_box{
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  background: #fff;
+   overflow: hidden; 
+}
+.notice_icon{
+  float: left;
+  margin-top: 26rpx;
+  width: 42rpx;
+  height: 36rpx;
+}
+.notice_items{
+  margin-left:70rpx;
+  margin-right: 30rpx;
+  line-height: 88rpx;
+}
+/* .notice_items */
+.notice_items view{
+  /* margin-right: 30rpx; */
+  font-size: 24rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice_more{
+  float: right;
+  margin-top: 30rpx;
+  width: 16rpx;
+  height: 28rpx;
+}
+
+.brand_box{
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.recommend_scroll_x_box {
+  height: 100rpx;
+  white-space: nowrap;
+  display: flex;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.recommend_hot_box {
+  width: 165rpx;
+  height: 100rpx;
+  margin-right: 12rpx;
+  display: inline-block;
+}
+.recommend_hot_image {
+  width: 160rpx;
+  height: 100rpx;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+}
+
+.contact{
+  position: fixed;
+  right: 30rpx;
+  bottom: 100rpx;
+  background: #83c44e;
+  padding: 24rpx;
+  border-radius: 50%;
+}

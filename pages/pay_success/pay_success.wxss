@@ -1,0 +1,8 @@
+/* pages/pay_success/pay_success.wxss */
+.pay_success{
+  padding: 40rpx 0;
+  text-align: center;
+  line-height: 2;
+  font-size: 40rpx;
+  color: #333;
+}

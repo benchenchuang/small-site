@@ -1,0 +1,137 @@
+/* pages/confirm_order/confirm_order.wxss */
+.order_item{
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #e4e4e4;
+  overflow: hidden;
+}
+.order_item:last-child{
+  border-bottom: none;
+}
+.order_item .item_pic{
+  float: left;
+  width: 214rpx;
+  height: 146rpx;
+}
+.order_item .item_box{
+  margin-left: 244rpx;
+}
+.item_box .item_title{
+  width:100%;
+  height: 90rpx;
+  line-height: 45rpx;
+  font-size: 30rpx;
+  color: #333;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  word-break:break-all;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.item_box .item_else{
+  margin-top: 15rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.user_address {
+  position: relative;
+  padding: 30rpx 0;
+}
+.user_address .location_icon{
+  left: 0;
+  float: left;
+  width: 36rpx;
+  height: 42rpx;
+}
+.user_address .user_location{
+  margin-left: 66rpx;
+  margin-right: 42rpx;
+}
+.user_info{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 44rpx;
+}
+.address{
+  width: 100%;
+  font-size: 26rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.user_address .location_icon,
+.more{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.more{
+  right: 0;
+  float: right;
+  width: 16rpx;
+  height: 28rpx;
+}
+.section{
+  position: relative;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.section .picker{
+  margin-left: 200rpx;
+  margin-right: 40rpx;
+  text-align: right;
+}
+.remark{
+  margin-left: 140rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  padding: 15rpx 0;
+}
+.cart_foot{
+  width: 100%;
+  height: 108rpx;
+}
+.cart_totals{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 108rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+  box-shadow: 0 -1rpx 4rpx 1rpx rgba(0, 0,0, .05);
+}
+.cart_totals{
+  width: 100%;
+  padding-left: 30rpx;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 30rpx;
+  line-height: 108rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+.cart_totals .total_all{
+  flex: 2;
+  -webkit-box-flex: 2;
+}
+.cart_totals .total_price{
+  flex: 3;
+  -webkit-box-flex:3;
+}
+.total_price text{
+  color: #d2352c;
+  font-size: 32rpx;
+}
+.cart_totals .total_get{
+  flex: 3;
+  -webkit-box-flex:3;
+  color: #fff;
+  text-align: center;
+  background: #ff6709;
+}
+button{
+  border-radius: 0;
+}

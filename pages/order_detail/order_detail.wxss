@@ -1,0 +1,98 @@
+/* pages/order_detail/order_detail.wxss */
+
+.order_item{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+.fr{
+  float: right;
+}
+.main_color{
+  color: #ff6709;
+}
+.addr_box{
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #333;
+}
+.small_item{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.order_list{
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.area_item{
+  margin: 30rpx 0;
+  width: 100%;
+  line-height: 36rpx;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  font-size: 28rpx;
+  color: #333;
+  align-items:center;
+}
+.area_item .name{
+  flex: 5;
+  -webkit-box-flex: 5;
+}
+.area_item .count{
+  flex: 1;
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+.area_item .price{
+  flex: 2;
+  -webkit-box-flex: 2;
+  text-align: right;
+}
+.order_contact{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #ff6709;
+}
+.order_contact image{
+  margin-right: 10rpx;
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align:text-bottom;
+}
+.all_price{
+  margin-top: 18rpx;
+  float: right;
+  font-size: 30rpx;
+  color: #333;
+}
+.order_bottom{
+  width: 100%;
+  height: 98rpx;
+}
+.order_controls{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 36rpx;
+  color: #fff;
+  height: 98rpx;
+  line-height: 98rpx;
+}
+.order_controls .order_btn{
+  flex: 1;
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+.order_cancel{
+  background: #999;
+}
+.order_go{
+  background: #ff6709;
+}

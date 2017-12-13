@@ -1,0 +1,64 @@
+/* pages/orders/orders.wxss */
+@import '../template/template.wxss';
+.tab_box{
+  width: 100%;
+  height: 96rpx;
+}
+.tab-h{
+  width: 100%; 
+  display: flex;
+  display: -webkit-flex;
+  height: 96rpx;
+  font-size: 30rpx; 
+  color: #666;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  z-index: 99;
+  border-bottom: 1rpx solid #e4e4e4;
+  background: #fff; 
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.tab_scroll{
+  white-space: nowrap;
+  display: flex;
+  height: 96rpx;
+  font-size: 30rpx; 
+  color: #666;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  z-index: 99;
+  border-bottom: 1rpx solid #e4e4e4;
+  background: #fff; 
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.tab_scroll .tab-item{
+  width: 165rpx;
+  margin-right: 12rpx;
+  display: inline-block;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.tab-h .tab-item{
+  flex:1;
+  -moz-box-flex: 1;
+  flex-grow: 1;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.tab-item.active{
+  color: #ff6709;
+}
+.tab-item text{
+  display: inline-block;
+  border-bottom: 4rpx solid #fff;
+}
+.tab-item.active text{
+  border-bottom-color: #ff6709;
+}
+

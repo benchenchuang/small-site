@@ -1,0 +1,29 @@
+<!--pages/appointment/appointment.wxml-->
+<!--pages/address_edit/address_edit.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='redact_box'>
+    <view class='redact_item'>
+      <text class='redact_name'>联系人</text>
+      <input class='react_area' name='appoint_name' type='text' placeholder='请输入姓名'/>
+    </view>
+    <view class='redact_item'>
+      <text class='redact_name'>手机号</text>
+      <input class='react_area' name="appoint_phone" type='number' placeholder='请输入手机号'/>
+    </view>
+    <view class='redact_item'>
+      <text class='redact_name'>预约时间</text>
+      <image class='more' src='../../image/more.png'></image>
+      <picker class='react_area' mode="date" value="{{date}}" start="{{today}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <textarea class='appoint_content' name="appoint_content" placeholder='请输入预约信息'></textarea>
+
+  <view class='main'>
+    <button class='btn_addr' formType="submit" hover-class='none'>确定</button>
+  </view>
+</form>

@@ -1,0 +1,24 @@
+<!--pages/money/money.wxml-->
+<view class='detail_block'>
+  <view class='money_all'>账户余额：<text class='red'>￥36.00</text></view>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view class='detail_block'>
+    <view class='pay_block'>
+      <view class='pay_title fl'>充值须知：</view>
+      <view class='pay_detail'>
+        <view>1、仅限微信支付；</view>
+        <view>2、充值额度1-10000元。</view>
+      </view>
+    </view>
+
+    <view class='redact_item'>
+      <text class='redact_name'>充值金额</text>
+      <input class='react_area' bindinput="bindKeyInput" name='rechart_money' type='number' placeholder='请输入金额'/>
+    </view>
+  </view>
+  <view class='main'>
+      <button class='btn_addr' formType="submit" hover-class='none'>充值<text wx:if="{{rechartMoney}}">￥{{rechartMoney}}</text></button>
+  </view>
+</form>

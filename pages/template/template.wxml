@@ -1,0 +1,129 @@
+<!-- 显示搜素模块 -->
+<template name="show_search">
+  <view class="search_items">
+    <view class='search_item'>
+      <icon type="search" size="20"></icon>
+      <view class='search_cont'>
+        <text>请输入商品名称{{showSearch}}</text>
+      </view>
+    </view>
+  </view>
+</template>
+<!-- 搜索模块 -->
+<template name="search_box">
+  <view class="search_items">
+    <view class='search_item'>
+      <icon type="search" size="20"></icon>
+      <input class='search_cont' auto-focus="{{focus}}" type='text' placeholder='请输入商品名称' confirm-type="search" placeholder-style='color:#aeabae' bindblur="resultShow" disabled="{{disabled}}"></input>
+    </view>
+  </view>
+</template>
+
+<!-- 轮播模块 -->
+<template name="swiper-slide">
+  <navigator hover-class="none">
+    <swiper-item>
+      <image src="{{item.Picture}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </navigator>
+</template>
+
+<!-- 区块模板 -->
+<template name="area-head">
+  <view class='area_head'>
+    <view class='area_size'>
+      <image src="{{url}}"></image>
+      <text>{{name}}</text>
+    </view>
+  </view>
+</template>
+
+<!-- 商品模板 -->
+<template name="shops_box">
+  <view class='shop_item'>
+    <navigator class="shop_link" hover-class="none" url='../shop_detail/shop_detail?id={{Id}}'>
+      <image src='{{PreviewPicture}}'></image>
+      <view class='shop_title'>{{Name}}</view>
+      <rich-text class='shop_price' name="div">
+        <text class='now_price'>￥{{Price}}</text>
+        <text class='old_price'>￥{{FakePrice}}</text>
+      </rich-text>
+    </navigator>
+    <view class='shop_tap' data-id='{{Id}}' bindtap='addToCart'>
+      <image src='../../image/icon-cart.png'></image>
+      <text>添加到购物车</text>
+    </view>
+  </view>
+</template>
+
+<!-- 列表模板 -->
+<template name="person_list">
+  <navigator class='list_item' hover-class='none' url="{{item.active?'':item.url}}">
+    <image class='list_icon' mode='widthFix' src='{{item.icon}}'></image>
+    <text class='list_name'>{{item.name}}</text>
+    <image class='more' src='../../image/more.png'></image>
+    <text class='list_content'>{{item.content}}</text>
+  </navigator>
+</template>
+
+<!-- 订单列表 -->
+<template name='order_item'>
+  <view class='order_item'>
+    <navigator class='order_top' url='../order_detail/order_detail?id={{item.Id}}'>
+      <view class='order_head'>
+        <text class='order_num'>订单编号：{{item.Number}}</text>
+        <text class='order_status' wx:if="{{item.StateText}}">{{item.StateText}}</text>
+      </view>
+      <block wx:if="{{item.OrderType==0}}">
+        <view class='send_time'>配送时间：{{item.DeliveryTimeRequired}}</view>
+        <view class='order_image'>
+          <block wx:for="{{item.Items}}" wx:key="image">
+            <block wx:if="{{index<4}}">
+              <image src="{{item.PreviewPicture}}"></image>
+            </block>
+          </block>
+        </view>
+        <view class='order_all'>
+          <text class='other'>共{{item.GoodsCount}}件商品</text>
+          <text class='other' wx:if="{{item.State==1}}">{{item.StateText}}:￥<text>{{item.TotalPrice}}</text>
+          </text>
+          <text class='other' wx:else>实付款:￥<text>{{item.ActuallyPrice}}</text>
+          </text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='send_time'>支付时间：{{item.PayTime}}</view>
+        <view class='order_all'>
+          <text class='other'>实付款:￥<text>{{item.ActuallyPrice}}</text>
+          </text>
+        </view>
+      </block>
+    </navigator>
+    <view class='order_controls' wx:if="{{item.OrderType==0}}">
+      <block wx:if="{{item.State==1}}">
+        <view class='btn btn_default' bindtap='goToPay' data-id='{{item.Id}}'>付款</view>
+        <view class='btn btn_primary' bindtap='cancel' data-id='{{item.Id}}'>取消订单</view>
+      </block>
+      <block wx:if="{{item.State==3}}">
+        <view class='btn btn_default' bindtap='confirmOrder' data-id='{{item.Id}}'>确认收货</view>        
+      </block>
+      <block wx:elif="{{item.State==4}}">
+        <navigator class='btn btn_default' url='../shop_praise/shop_praise?id={{item.Id}}'>去评价</navigator>
+      </block>
+      <block wx:elif="{{item.State==5}}">
+        <button class='btn btn_default'>查看评价</button>
+      </block>
+      <block wx:else>
+      </block>
+    </view>
+  </view>
+
+</template>
+
+<!-- 订单列表 -->
+<template name='no_data'>
+  <view class='no_data'>
+    <image src='../../image/no_data.png' mode='widthFix'></image>
+    <view>暂无数据</view>
+  </view>
+</template>

@@ -1,0 +1,58 @@
+<!--pages/confirm_order/confirm_order.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='detail_block'>
+    <block wx:for="{{details.Items}}" wx:key="order">
+      <view class='order_item'>
+        <image class='item_pic' src="{{item.PreviewPicture}}"></image>
+        <view class='item_box'>
+          <view class='item_title'>{{item.Name}}</view>
+          <view class='item_else'>
+            <text class='red'>￥{{item.Price}}</text>
+            <text class='fr'>x {{item.Quantity}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='detail_block'>
+    <navigator class='user_address' hover-class='none' open-type='redirect' url="../address/address?orderid={{details.Id}}">
+      <image class='location_icon' src='../../image/icon-location.png'></image>
+      <image class='more' src='../../image/more.png'></image>
+      <view class='user_location'>
+        <view class='user_info'>
+          <text>{{details.LinkMan}} </text>
+          <text> {{details.LinkPhone}}</text>
+        </view>
+        <view class='address'>{{details.Address}}</view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="detail_block">
+    <picker mode="time" value="{{time}}" start="{{thisTime}}" end="21:00" bindchange="bindTimeChange">
+      <view class='section'>
+        <text class="fl">配送时间(当天)</text>
+        <image class='more' src='../../image/more.png'></image>
+        <view class="picker">{{time}}</view>
+      </view>
+    </picker>
+  </view>
+
+  <view class='detail_block'>
+    <view class='section'>
+      <text class="fl">备注信息</text>
+      <input class='remark' type='text' placeholder='请输入备注信息' name="Contents" />
+    </view>
+  </view>
+
+  <view class='cart_foot'>
+    <view class='cart_totals'>
+      <view class='total_price'>
+        合计:
+        <text>￥{{details.TotalPrice}}</text>
+      </view>
+      <button formType="submit" wx:if="{{details.State==0}}" class='total_get' disabled="{{submitOrderDisable}}">提交订单</button>
+    </view>
+  </view>
+</form>

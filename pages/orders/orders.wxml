@@ -1,0 +1,17 @@
+<!--pages/orders/orders.wxml-->
+<import src="../template/template.wxml" />
+<view>
+  <view class='tab_box'>
+    <scroll-view class="tab_scroll" scroll-x="false" scroll-with-animation='true' scroll-into-view="{{toView}}">
+      <block wx:for="{{orderTabs}}" wx:key="tab">
+        <view class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" data-state="{{item.id}}" bindtap="swichNav" id="{{'s'+item.id}}">
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="tab-content" wx:for="{{list}}" wx:key="order">
+    <template is='order_item' data="{{item}}"></template>
+  </view>
+  <template is="no_data" wx:if="{{list.length<=0}}"></template>
+</view>

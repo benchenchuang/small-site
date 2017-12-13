@@ -1,0 +1,92 @@
+<!--index.wxml-->
+<import src="../template/template.wxml" />
+
+<!-- 搜索 -->
+<navigator url='../../pages/search/search' hover-class='none'>
+  <template is="show_search"></template>
+</navigator>
+
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{ActiveColor}}" circular="{{circular}}">
+  <block wx:for="{{slides}}" wx:key="banner">
+    <template is="swiper-slide" data="{{item}}"></template>
+  </block>
+</swiper>
+
+<!-- 商户地址信息 -->
+<view class='shop_info' wx:if="{{address}}">
+  <view class='shop_address'>
+    <image class='fl shop_icon' src='../../image/icon-location.png'></image>
+    <navigator hover-class='none' url='../appointment/appointment' wx:if="{{false}}">
+      <image class='fr shop_icon' src='../../image/icon-appoint.png'></image>
+    </navigator>
+    <image bindtap='shopCall' class='fr shop_icon' src='../../image/shop_phone.png'></image>
+    <view class='shop_addr' bindtap='showShopAddress'>公司地址:{{address}}</view>
+  </view>
+</view>
+
+<!-- 网站公告 -->
+<view class='notice_box'>
+  <image class='notice_icon' src='{{noticeIcon}}'></image>
+  <view class='notice_items'>
+    <swiper vertical="true" indcator-dots="false" autoplay="true" interval="3000" circular="true" duration="300">
+      <block wx:for="{{notices}}" wx:key="notice">
+        <navigator hover-class="none" url='../news_detail/news_detail?id={{item.Id}}'>
+          <swiper-item>
+            <view class="scroll-view-item">{{item.Name}}
+              <image class='notice_more' src='../../image/more.png'></image>
+            </view>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+</view>
+
+<!-- menu菜单分类 -->
+<view class='menu_box'>
+  <block wx:for="{{categories}}" wx:key="menu">
+    <view class='menu_item' hover-class="none" data-name='{{item.Name}}' bindtap='goToCategory'>
+      <image src='{{item.Picture}}' mode='widthFix'></image>
+      <text>{{item.Name}}</text>
+    </view>
+  </block>
+
+  <navigator class='menu_item' url='../sort/sort' open-type='switchTab'>
+    <image src='../../image/menu_08.png'></image>
+    <text>更多</text>
+  </navigator>
+</view>
+
+
+<!-- 品牌专区 -->
+<view>
+  <view class='main'>
+    <template is="area-head" data="{{...brandHead}}"></template>
+  </view>
+  <!-- 品牌内容 -->
+  <view class='brand_box'>
+    <scroll-view class="recommend_scroll_x_box" scroll-x="true" scroll-with-animation='true'>
+      <block wx:for="{{brands}}" wx:key="brand">
+        <navigator class="recommend_hot_box" hover-class="none" url='{{item.link}}'>
+          <image src="{{item.Picture}}" class="recommend_hot_image" width="165" height="100"></image>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+
+<!-- 新品推荐 -->
+<view class='main'>
+  <template is="area-head" data="{{...newHead}}"></template>
+  <!-- 商品列表 -->
+  <view class='shops_box'>
+    <block wx:for="{{goods}}" wx:key="new_shop">
+      <template is="shops_box" data="{{...item}}"></template>
+    </block>
+  </view>
+</view>
+
+<contact-button type="default-light" size="24" session-from="weapp" class='contact'>
+</contact-button>

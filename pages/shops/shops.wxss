@@ -1,0 +1,68 @@
+/* pages/shops/shops.wxss */
+@import '../template/template.wxss';
+
+.filter_box{
+  width: 100%;
+  height: 98rpx;
+}
+.filters{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  padding: 0 30rpx;
+  height: 98rpx;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 1rpx 10rpx 3rpx rgba(0,0,0,.05);
+  z-index: 3;
+}
+.filters .filter_item{
+  flex: 1;
+  -webkit-box-flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 98rpx;
+}
+.triangle{
+  margin-left: 10rpx;
+  display: inline-block;
+  vertical-align: text-bottom;
+  width:0;
+  height:0;
+  border-width:10rpx;
+  border-style:solid dashed dashed dashed;
+  border-color:#999 transparent transparent transparent;
+}
+
+.filter_item.filter_active{
+  color: #ff6709;
+}
+.filter_item.filter_active .triangle,
+.filter_item.filter_active .triangle.down{
+  border-color:#ff6709 transparent transparent transparent;
+}
+.filter_item .triangle.up{
+  position: relative;
+  top: -20rpx;
+  border-color:transparent transparent #999 transparent;
+}
+.filter_item .triangle.down{
+  position: relative;
+  top: 4rpx;
+  left: -30rpx;
+}
+.filter_item.filter_active.up_active .up{
+  position: relative;
+  top: -20rpx;
+  border-color:transparent transparent #ff6709 transparent;
+}
+.filter_item.filter_active.up_active .triangle.down{
+  border-color:#999 transparent transparent transparent;
+}
+.list_box{
+  margin-top: 30rpx;
+}

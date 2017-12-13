@@ -1,0 +1,5 @@
+/* pages/search/search.wxss */
+@import '../template/template.wxss';
+.shops_box{
+  margin-top: 30rpx;
+}

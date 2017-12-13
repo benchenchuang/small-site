@@ -1,0 +1,22 @@
+<!--pages/sort/sort.wxml-->
+<!-- 分类列表 -->
+<view class='sorts_wrap'>
+    <scroll-view class="sorts_scroll" scroll-y="true" scroll-with-animation='true'>
+      <block wx:for="{{sortsData}}" wx:key="brand">
+        <view class="sorts_item {{index==currentIndex?'select_item':''}}" data-index='{{index}}' bindtap='sortClick'>
+          <text>{{item.Name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+</view>
+
+<!-- 分類内容展示 -->
+<view class='sorts_show'>
+  <view class='show_area'>
+    <navigator class="show_item" hover-class='none' wx:for="{{sortList}}" wx:key="sort" url='../shops/shops?cate={{item.Id}}'>
+      <image src='{{item.Picture}}'></image>
+      <text>{{item.Name}}</text>
+    </navigator>
+  </view>
+</view>
+

@@ -1,0 +1,105 @@
+/**app.wxss**/
+
+page {
+  background: #f5f5f5;
+}
+
+.main {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.btn_addr, .btn_default {
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  background: #ff6709;
+  border-radius: 10rpx;
+}
+
+.btn_default {
+  color: #333;
+  background: #fff;
+  border: 1rpx solid #e4e4e4;
+}
+
+image {
+  vertical-align: top;
+}
+
+.detail_block {
+  margin: 30rpx 0;
+  padding: 0 30rpx;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+  background: #fff;
+}
+
+.block_head {
+  font-size: 32rpx;
+  color: #333;
+  height: 98rpx;
+  line-height: 98rpx;
+}
+
+.block_item {
+  padding: 22rpx 0;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #666;
+  border-top: 1rpx solid #e4e4e4;
+  overflow: hidden;
+}
+
+.block_item .block_name {
+  float: left;
+}
+
+.block_item .block_content {
+  margin-left: 140rpx;
+  text-align: right;
+}
+
+.red {
+  color: #d2352c;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mt_40 {
+  margin-top: 40rpx;
+}
+
+.no_data {
+  padding: 50rpx 30rpx;
+  text-align: center;
+  line-height: 3;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.no_data image {
+  width: 200rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked,
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border-color: #ff6709!important;
+  background: #ff6709!important;
+  color: #fff !important;
+}
+
+checkbox .wx-checkbox-input {
+  border-color: #999;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}

@@ -1,0 +1,55 @@
+/* pages/person/person.wxss */
+@import '../template/template.wxss';
+.person_head{
+  width: 100%;
+  padding: 40rpx 30rpx;
+  background: #ff6709;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.person_head .avatar{
+  margin:20rpx auto;
+  width: 130rpx;
+  height: 130rpx;
+  display: block;
+  border-radius: 50%;
+}
+.person_head .more{
+  width: 16rpx;
+  height: 28rpx;
+  margin-top: 48rpx;
+}
+.person_head .nickname{
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+
+.list_box{
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.list_item_box{
+  width: 100%;
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #e4e4e4;
+  overflow: hidden;
+}
+.list_item_box .item_box{
+  flex: 1;
+  -webkit-box-flex: 1;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+.item_box image{
+  margin: 0 auto 10rpx;
+  width: 60rpx;
+  height: 44rpx;
+  display: block;
+}

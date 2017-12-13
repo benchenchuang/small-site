@@ -1,0 +1,21 @@
+<!--pages/application/application.wxml-->
+<view class='detail_block'>
+  <view class='block_head'>什么什么菜名字吧？</view>
+  <view class='block_item'>
+    <text class='block_name'>订单编号</text>
+    <view class='block_content'>254546512156454564556</view>
+  </view>
+  <view class='block_item'>
+    <text class='block_name'>退款金额</text>
+    <view class='block_content red'>￥123.00</view>
+  </view>
+  <view class='block_item'>
+    <text class='block_name'>退款原因</text>
+    <input type='text' class='block_content' placeholder='填写退款原因'/>
+  </view>
+</view>
+<view class='tip'>退款将在1-3日内完成，金额将原路退回，请注意查看</view>
+
+<view class='main mt_40'>
+  <navigator class='btn_addr' hover-class='none'>提交申请</navigator>
+</view>

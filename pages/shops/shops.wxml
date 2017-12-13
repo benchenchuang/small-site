@@ -1,0 +1,27 @@
+<!--pages/shops/shops.wxml-->
+<import src="../template/template.wxml" />
+
+<view class='filter_box'>
+  <view class='filters'>
+    <view class="filter_item {{showFilter==0?'filter_active':''}}" data-index="0" data-sort='0' bindtap="showTab">综合
+      <text class='triangle'></text>
+    </view>
+    <view class="filter_item {{showFilter==1?'filter_active':''}}" data-index="1" data-sort='2' bindtap="showTab">销量
+      <text class='triangle'></text>
+    </view>
+    <view class="filter_item {{showFilter==2?'filter_active':''}} {{upFilter==1?'up_active':''}}" data-index="2" data-sort='4' bindtap="showTab">价格
+      <text class='triangle up'></text>
+      <text class='triangle down'></text>
+    </view>
+  </view>
+</view>
+
+<view class='main'>
+  <!-- 商品列表 -->
+  <view class='list_box'>
+    <block wx:for="{{shopList}}" wx:key="list">
+      <template is="shops_box" data="{{...item}}"></template>
+    </block>
+  </view>
+  <template is="no_data" wx:if="{{shopList.length<=0}}"></template>
+</view>

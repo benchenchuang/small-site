@@ -1,0 +1,72 @@
+<!--pages/order_detail/order_detail.wxml-->
+<view class='detail_block'>
+  <view class='order_item main_color'>{{details.StateText}}</view>
+</view>
+
+<view class='detail_block'>
+  <view class='addr_box'>
+    <view class='head_info'>
+      <text>{{details.LinkMan}}</text>
+      <text class='fr'>{{details.LinkPhone}}</text>
+    </view>
+    <view class='small_item'>{{details.Address+details.HouseNumber}}</view>
+  </view>
+</view>
+
+<view class='detail_block'>
+  <view class='order_list'>
+    <view class='area_item' wx:for="{{details.Items}}" wx:key="ord">
+      <text class='name'>{{item.Name}}</text>
+      <text class='count'>x{{item.Quantity}}</text>
+      <text class='price'>￥{{item.TotalPrice}}</text>
+    </view>
+  </view>
+  <view class='order_more'>
+    <text class='all_price' wx:if="{{order.State==1}}">{{details.StateText}}：￥{{details.ActuallyPrice}}</text>
+    <text class='all_price' wx:else>实付款：￥{{details.ActuallyPrice}}</text>
+
+    <view class='order_contact' bindtap='callPhone'>
+      <image src='../../image/contact.png'></image>联系我们
+    </view>
+  </view>
+</view>
+<view class='detail_block'>
+  <view class='block_head'>备注信息</view>
+  <view class='block_item'>
+    {{details.Contents}}
+  </view>
+</view>
+<view class='detail_block'>
+  <view class='block_head'>配送信息</view>
+  <view class='block_item'>
+    <text class='block_name'>配送时间</text>
+    <view class='block_content'>{{details.DeliveryTimeRequired}}</view>
+  </view>
+  <view class='block_item'>
+    <text class='block_name'>送达时间</text>
+    <view class='block_content'>{{details.DeliveryTime}}</view>
+  </view>
+</view>
+
+<view class='detail_block'>
+  <view class='block_head'>订单信息</view>
+  <view class='block_item'>
+    <text class='block_name'>订单编号</text>
+    <view class='block_content'>{{details.Number}}</view>
+  </view>
+  <view class='block_item'>
+    <text class='block_name'>下单时间</text>
+    <view class='block_content'>{{details.CreationDate}}</view>
+  </view>
+  <view class='block_item' wx:if="{{details.IsPaid}}">
+    <text class='block_name'>付款时间</text>
+    <view class='block_content'>{{details.PayTime}}</view>
+  </view>
+</view>
+
+<view class='order_bottom'>
+  <view class='order_controls'>
+    <view class='order_btn order_cancel' bindtap='cancel' data-id='{{details.Id}}' wx:if="{{details.State==1}}" hover-class='none'>取消订单</view>
+    <view class='order_btn order_go' bindtap='goToPay' data-id='{{details.Id}}' wx:if="{{!details.IsPaid}}" hover-class='none'>去付款</view>
+  </view>
+</view>

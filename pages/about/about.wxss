@@ -1,0 +1,55 @@
+/* pages/about/about.wxss */
+.about_block{
+  margin: 30rpx 0;
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+  text-indent: 60rpx;
+  line-height: 1.8;
+  background: #fff;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.footer{
+  width: 100%;
+  height: 98rpx;
+}
+.about_footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  display: -webkit-flex;
+  background: #fff;
+}
+.about_footer .about_flex_1{
+  flex: 1;
+  -webkit-box-flex: 1;
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+}
+.about_flex_1 image{
+  display: block;
+  margin: 10rpx auto;
+  width: 46rpx;
+  height: 46rpx;
+}
+.about_footer .flex_contact{
+  flex: 2;
+  -webkit-box-flex: 2;
+  text-align: center;
+  line-height: 98rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background: #ff6709;
+}
+button{
+  line-height: 1;
+  background: none;
+}
+button::after{
+  border: none;
+}

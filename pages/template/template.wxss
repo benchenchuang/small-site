@@ -1,0 +1,250 @@
+/* pages/template/template.wxss */
+/* 搜素模块样式 */
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.search_items{
+  width: 100%;
+  padding:20rpx 30rpx;
+  background: #f5f5f5;
+  box-sizing: border-box;
+}
+.search_item{
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 10rpx 20rpx 10rpx 80rpx;
+  box-sizing: border-box;
+  border-radius: 38rpx;
+}
+.search_item icon[type=search]{
+  position: absolute;
+  left: 30rpx;
+  top: 18rpx;
+}
+.search_item .search_cont{
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+}
+.search_cont text{
+  color: #999;
+  display: block;
+}
+/* 区块头部样式 */
+.area_head{
+  position: relative;
+  padding: 30rpx 0;
+  text-align: center;
+}
+.area_head::before,
+.area_head::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+  width: 50%;
+   height: 1rpx; 
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.area_head::before{
+  left: 0;
+}
+.area_head::after{
+  right: 0;
+}
+.area_size{
+  display: inline-block;
+  padding: 0 20rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  font-size: 30rpx;
+  color: #333;
+  background: #f5f5f5;
+}
+.area_size image{
+  width: 46rpx;
+  height: 46rpx;
+  vertical-align: top;
+}
+.area_size text{
+  padding-left: 10rpx;
+}
+/* 商品列表模块 */
+.shop_item{
+  float:left;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+  width: 335rpx;
+  border: 1rpx solid #ff6709;
+  border-radius: 6rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.shop_item:nth-child(2n){
+  margin-right: 0;
+}
+.shop_link{
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+.shop_item .shop_link image{
+  width: 100%;
+  height: 200rpx;
+}
+.shop_title{
+  font-size: 24rpx;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.shop_price .now_price{
+  font-size: 30rpx;
+  color: #e51100;
+  padding-right: 10rpx;
+}
+.shop_price .old_price{
+  position: relative;
+  font-size: 24rpx;
+  color: #999;
+}
+.shop_price .old_price::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  width:100%;
+  height: 1rpx; 
+  border-bottom: 1rpx solid #999;
+}
+.shop_tap{
+  width: 100%;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  background: #ff6709;
+}
+.shop_tap image{
+  width: 32rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  vertical-align: -3rpx;
+}
+/* 列表模板 */
+.list_item{
+  height: 108rpx;
+  line-height: 108rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.list_item:last-child{
+  border-bottom: none;
+}
+.list_item .list_icon{
+  width: 46rpx;
+  vertical-align: middle;
+}
+.list_item .list_name{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.list_item .list_content{
+  float: right;
+  margin-right: 20rpx;
+  font-size: 36rpx;
+  color: #ff6709;
+}
+.list_item .more{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  float: right;
+  width: 16rpx;
+  height: 28rpx;
+}
+/* 订单列表 */
+.order_item{
+  margin: 30rpx 0;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-top:1rpx solid #e4e4e4;
+  border-bottom:1rpx solid #e4e4e4;
+}
+.order_item .order_head{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #666;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.order_head .order_status{
+  float: right;
+  color: #ff6709;
+}
+.order_item .send_time{
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+.order_item .order_image{
+  padding: 15rpx;
+  background: #f7f7f7;
+}
+.order_image image{
+  width: 155rpx;
+  height: 120rpx;
+  margin-right: 15rpx;
+}
+.order_image image:last-child{
+  margin-right: 0;
+}
+.order_item .order_all{
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: right;
+}
+.order_item .order_all .other{
+  margin-left: 20rpx;
+  font-size:24rpx;
+  color: #999;
+}
+.other text{
+  font-size: 30rpx;
+  color: #333;
+}
+.order_controls{
+  padding: 20rpx 0;
+  border-top: 1rpx solid #e4e4e4;
+  overflow: hidden;
+}
+.order_controls .btn{
+  margin-left: 30rpx;
+  float: right;
+  width: 156rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  background: #fff;
+}
+.btn_primary{
+  color: #666;
+}
+.btn_default{
+  color: #ff6709;
+}
+.order_controls navigator.btn{
+  height: 56rpx;
+  line-height: 56rpx;
+  border: 1rpx solid rgba(0,0,0,.2);
+  border-radius: 10rpx;
+  text-align: center;
+}
